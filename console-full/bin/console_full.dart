@@ -11,10 +11,11 @@ void main(List<String> arguments) async {
 //  var z = await x(40);
 //  print(z);
 
-  Stream stream = exampleStream(20);
-  await for(var s in stream) {
-    print("Number: $s");
-  }
+//  Stream stream = exampleStream(20);
+//  await for(var s in stream) {
+//    print("Number: $s");
+//  }
+  exampleStream(20).listen((int x) => print("Number: $x"));
 }
 
 Stream<int> exampleStream(int x) async* {
